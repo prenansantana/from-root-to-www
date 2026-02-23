@@ -1,4 +1,4 @@
-# fly.toml app configuration file generated for from-root-to-www on 2026-02-23T12:22:10Z
+# fly.toml app configuration file generated for from-root-to-www on 2026-02-23T21:53:27Z
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
@@ -15,14 +15,6 @@ primary_region = 'gru'
   auto_start_machines = true
   min_machines_running = 0
   processes = ['app']
-
-  [http_service.checks]
-    [http_service.checks.health]
-      interval = "10s"
-      timeout = "2s"
-      grace_period = "5s"
-      method = "GET"
-      path = "/healthz"
 
 [[vm]]
   memory = '1gb'
